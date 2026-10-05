@@ -1,13 +1,18 @@
+///jsx
+//fragment
+
+import './style.css'
 const MyComponent = () =>{
     return (
-        <div>Nguyen Manh Dung la vua IT</div>
+        <>
+           <div className="abc">Nguyen Manh Dung la vua IT</div>
+           <div className="child">child</div>
+
+        </>
+       
     );
 }
 
-// const FakeComponent = () =>{
-//     return (
-//         <div>Fake Component</div>
-//     )
-// }
+
 
 export default MyComponent;
