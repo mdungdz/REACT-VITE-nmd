@@ -3,12 +3,24 @@ const TodoNew=(props)=>{
   const {addNewTodo}=props;
   
   //addNewTodo("eric")
+  const handleClick=()=>{
+    alert("click me")
+  }
+
+  const handleOnchange=(name)=>{
+    console.log(">>> handleOnchange", name);
+  }
   
-    return(
+  return(
         <div className='todo-new'>
-        <input type="text" />
-        <button>Add</button>
+        <input type="text" 
+          onChange={(event)=>handleOnchange(event.target.value)}
+        />
+        <button 
+          style={{cursor: "pointer"}}
+          onClick={handleClick}
+        >Add</button>
       </div>
-    )
+  )
 }
 export default TodoNew;
